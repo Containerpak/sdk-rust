@@ -10,7 +10,9 @@ RUN apt-get update && \
     echo "${RUSTUP_SHA256}  /tmp/rustup-init" | sha256sum -c - && \
     chmod +x /tmp/rustup-init && \
     RUSTUP_HOME=/opt/rustup CARGO_HOME=/opt/cargo \
-    /tmp/rustup-init -y --profile minimal --default-toolchain "${RUST_VERSION}" --no-modify-path
+    /tmp/rustup-init -y --profile minimal --default-toolchain "${RUST_VERSION}" --no-modify-path && \
+    RUSTUP_HOME=/opt/rustup CARGO_HOME=/opt/cargo \
+    /opt/cargo/bin/rustup component add --toolchain "${RUST_VERSION}" rustfmt
 
 FROM ghcr.io/containerpak/base-sdk:main
 
