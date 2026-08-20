@@ -9,6 +9,18 @@
   "desktop_entries": [],
   "dependencies": [],
   "addons": [],
+  "addon_provider": {
+    "id": "rust",
+    "slot": "sdk.rust",
+    "mode": "exclusive",
+    "exports": {
+      "path": ["/opt/cargo/bin"],
+      "environment": [
+        "RUSTUP_HOME=/opt/rustup",
+        "CARGO_HOME=/opt/cargo"
+      ]
+    }
+  },
   "idle_time": 0,
   "override": {
     "socketX11": false,
