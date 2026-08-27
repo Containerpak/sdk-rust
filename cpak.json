@@ -1,11 +1,17 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "Rust SDK",
   "description": "Rust compiler, Cargo, rustfmt and rustup.",
   "version": "1.95.0",
-  "image": "ghcr.io/containerpak/sdk-rust:main",
-  "binaries": ["/usr/local/bin/rustc", "/usr/local/bin/cargo", "/usr/local/bin/rustdoc", "/usr/local/bin/rustfmt", "/usr/local/bin/rustup"],
+  "image": "ghcr.io/containerpak/sdk-rust@sha256:a0df1c542095cc07c9bc6f22edb8a70c5d9d0fc18f94fddde19431e3242309fc",
+  "binaries": [
+    "/usr/local/bin/rustc",
+    "/usr/local/bin/cargo",
+    "/usr/local/bin/rustdoc",
+    "/usr/local/bin/rustfmt",
+    "/usr/local/bin/rustup"
+  ],
   "desktop_entries": [],
   "dependencies": [],
   "addons": [],
@@ -14,7 +20,9 @@
     "slot": "sdk.rust",
     "mode": "exclusive",
     "exports": {
-      "path": ["/opt/cargo/bin"],
+      "path": [
+        "/opt/cargo/bin"
+      ],
       "environment": [
         "RUSTUP_HOME=/opt/rustup",
         "CARGO_HOME=/opt/cargo"
@@ -23,16 +31,11 @@
   },
   "idle_time": 0,
   "override": {
-    "socketX11": false,
     "socketWayland": false,
     "socketPulseAudio": false,
-    "socketSessionBus": false,
-    "socketSystemBus": false,
     "socketSshAgent": true,
     "socketCups": false,
     "socketGpgAgent": true,
-    "socketAtSpiBus": false,
-    "socketBluetooth": false,
     "deviceDri": false,
     "deviceKvm": false,
     "deviceShm": false,
@@ -44,7 +47,12 @@
     "deviceAll": false,
     "notification": false,
     "openURI": false,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -52,7 +60,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": []
+    "asRoot": false
   }
 }
