@@ -4,7 +4,7 @@
   "name": "Rust SDK",
   "description": "Rust compiler, Cargo, rustfmt and rustup.",
   "version": "1.95.0",
-  "image": "ghcr.io/containerpak/sdk-rust@sha256:d64947a3ead41690feb6689b531dd7cf8b86df4a44c2d9dff02a59453047a698",
+  "image": "ghcr.io/containerpak/sdk-rust@sha256:d7f5b3360cf83cdbb7b4a1a85dac18ca7f202f317aa7f662326a915cd1e42a7c",
   "binaries": [
     "/usr/local/bin/rustc",
     "/usr/local/bin/cargo",
